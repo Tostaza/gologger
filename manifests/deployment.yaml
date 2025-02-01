@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: gologger
-        image: joeldj/gologger:0.0.1
+        image: ghcr.io/tostaza/gologger:0.0.2
         ports:
         - containerPort: 8080
