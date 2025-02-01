@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gologger-deployment
+  labels:
+    app: gologger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gologger
+  template:
+    metadata:
+      labels:
+        app: gologger
+    spec:
+      containers:
+      - name: gologger
+        image: joeldj/gologger:0.0.1
+        ports:
+        - containerPort: 8080
