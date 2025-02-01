@@ -9,7 +9,4 @@ RUN go mod download && go mod verify
 COPY . .
 RUN go build -v -o /usr/local/bin/gologger ./...
 
-ENV GOLOGGER_LISTEN_ADDR="0.0.0.0"
-ENV GOLOGGER_LISTEN_PORT="8080"
-
 CMD ["gologger"]
